@@ -33,6 +33,7 @@ def desconto_dependentes(num_dependentes):
 def calc_salario_liquido(sal_bruto, num_dependentes):
     desconto_inss = calcular_inss(sal_bruto)
     salario_liquido = sal_bruto - desconto_inss - desconto_dependentes(num_dependentes)
+#    salario_liquido = sal_bruto - desconto_inss - 100.0 *num_dependentes
     desconto_ir  = imposto_de_renda(salario_liquido)
 
     miseria_final = sal_bruto - desconto_inss - desconto_ir
